@@ -1,0 +1,148 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Prevent scrolling if not needed */
+    background-color: black;
+    font-family: 'Happy Monkey', cursive;
+}
+
+spline-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 108vh;
+    z-index: -1;
+    /* Send it behind everything */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    /* Place above background */
+    color: white;
+    padding: 20px;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 10;
+    color: white;
+    font-size: 60px;
+    opacity: 0;
+    white-space: nowrap;
+    animation:
+        fadeInScale 2s ease-out forwards,
+        pulse 2s infinite ease-in-out 2s,
+        glowEffect 0.8s forwards;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: none;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f0f;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+/* Fade in and scale up */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Soft pulsing effect */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+}
+
+.intro {
+    margin-top: 62px;
+    position: fixed;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+/* hide your source paragraphs */
+.intro .source {
+    display: none;
+}
+
+/* style for the live element */
+#typewriter {
+    font-size: 30px;
+    color: whitesmoke;
+    border-right: 1px solid white;
+    /* set these vars in JS */
+    width: 0;
+    --length: 0ch;
+    --chars: 0;
+}
+
+/* when we add the .typing class it runs both animations */
+#typewriter.typing {
+    animation:
+        typing 5s steps(var(--chars), end) forwards 0.5s,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    80% {
+        width: var(--length);
+        /* Finish typing */
+    }
+
+    100% {
+        width: calc(var(--length) + 0.5ch);
+        /* Add extra space at the end */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+

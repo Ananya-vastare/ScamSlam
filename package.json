@@ -1,0 +1,25 @@
+{
+  "name": "phishing-url-detection-tool",
+  "version": "1.0.0",
+  "description": "This is the  Phishing url detection code",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "phishing"
+  ],
+  "author": "Ananya Ravikiran Vastare",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0",
+    "twilio": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

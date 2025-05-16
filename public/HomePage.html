@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlamScam</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="Logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="MainHub.html">Get Started</a>
+    </div>
+    <h1>SCAMSLAM</h1>
+    <div class="intro">
+        <p class="source">Slams your scams</p>
+        <p class="source">Expose cheats save you</p>
+        <p class="source">Truth over scams today</p>
+        <p id="typewriter"></p>
+    </div>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/dQzcojSNgRHR3ckz/scene.splinecode"></spline-viewer>
+    <script>
+        const sources = Array.from(document.querySelectorAll('.intro .source'))
+            .map(p => p.textContent);
+        const el = document.getElementById('typewriter');
+        let idx = 0;
+
+        function startTyping() {
+            const text = sources[idx];
+            // set CSS vars so the animation steps and width match this text
+            el.style.setProperty('--length', text.length + 'ch');
+            el.style.setProperty('--chars', text.length);
+            el.textContent = text;
+
+            // trigger the animation class
+            el.classList.add('typing');
+        }
+
+        // when the typing animation finishes, queue the next one
+        el.addEventListener('animationend', e => {
+            if (e.animationName === 'typing') {
+                // remove the class so we can re‑add it next time
+                el.classList.remove('typing');
+                // advance index (loop back around)
+                idx = (idx + 1) % sources.length;
+                // small pause before next loop
+                setTimeout(startTyping, 2000);
+            }
+        });
+
+        // kick it off
+        startTyping();
+    </script>
+</body>
+
+</html>
