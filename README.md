@@ -32,5 +32,7 @@ With AI and technology growing there is a huge spike in the cyber attacks that a
      pip install requirements.txt
 3. Run the application
      python app.py
+
+   
 © [2025] [Ananya Ravikiran Vastare]. All rights reserved.
 
