@@ -28,7 +28,7 @@ With AI and technology growing there is a huge spike in the cyber attacks that a
 
 1. Clone the repository
    
-   ``markdown
+   ```markdown
    
      git clone https://github.com/Ananya-vastare/ScamSlam
 3. Install the dependencies
