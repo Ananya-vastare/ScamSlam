@@ -33,8 +33,12 @@ With AI and technology growing there is a huge spike in the cyber attacks that a
      git clone https://github.com/Ananya-vastare/ScamSlam
 3. Install the dependencies
 
+   ```markdown
+   
      pip install requirements.txt
 5. Run the application
+
+   ```markdown
    
      python app.py
 
