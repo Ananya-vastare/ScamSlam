@@ -18,5 +18,19 @@ Combines rule-based filtering with machine learning models to detect zero-day ph
 5. **Clean & Responsive UI/UX**
 Minimalist design that’s easy to navigate across desktop and mobile, offering a smooth and engaging experience.
 
-6.Privacy-Focused
+6. **Privacy-Focused**
 No user data is stored permanently; scans are processed in real time with high regard for privacy and security.
+
+## Motivation 
+With AI and technology growing there is a huge spike in the cyber attacks that are take place in the real world . Over the years cyber crimes has increased from 50-60% where phishing attack tends to stand 3rd in place . With the increase in these attacks **ScamSlam** hepls you to stay safe from the three most common phishing attacks by simplifying detection in multiple platforms into a single one .
+
+## Installation 
+
+1. Clone the repository
+     git clone https://github.com/Ananya-vastare/ScamSlam
+2. Install the dependencies
+     pip install requirements.txt
+3. Run the application
+     python app.py
+© [2025] [Ananya Ravikiran Vastare]. All rights reserved.
+
