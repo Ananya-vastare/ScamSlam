@@ -27,10 +27,13 @@ With AI and technology growing there is a huge spike in the cyber attacks that a
 ## Installation 
 
 1. Clone the repository
+   
      git clone https://github.com/Ananya-vastare/ScamSlam
-2. Install the dependencies
+3. Install the dependencies
+
      pip install requirements.txt
-3. Run the application
+5. Run the application
+   
      python app.py
 
    
