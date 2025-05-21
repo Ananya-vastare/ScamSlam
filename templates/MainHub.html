@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAMSLAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+<style>
+    /* Global body and html styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+    font-family: 'Happy Monkey', cursive;
+
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    margin:-5px;
+}
+
+.header h1 {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 36px;
+    color: white;
+    background: transparent;
+    border: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    animation: cyberpunkGlow 1.5s infinite alternate;
+}
+
+.dropdown {
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    display: inline-block;
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: none;
+    color: white;
+    min-width: 160px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown content when .open class is added */
+.dropdown-content.open {
+    display: block;
+    border: 1px solid white;
+}
+
+/* Styling for list items */
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+}
+
+.dropdown-content li {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li.clicked {
+    background-color: rgba(0, 255, 255, 0.2);
+    color: #000;
+    border: 1px solid rgba(0, 255, 255, 0.7);
+}
+
+.dropdown-content a {
+    background-color: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: none;
+}
+
+
+#container1 {
+    margin-top: -20px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+}
+
+#input-box {
+    padding: 10px;
+    width: 350px !important;
+    height: 20px
+}
+
+#submitBtn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Animation for a glowing effect */
+@keyframes cyberpunkGlow {
+    0% {
+        box-shadow: 0 0 8px rgba(255, 0, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.7);
+        border: 1px solid rgba(255, 0, 255, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 30px rgba(0, 255, 255, 1);
+        border: 1px solid rgba(0, 255, 255, 1);
+    }
+}
+
+.cell {
+    background: none;
+}
+
+#input-box {
+    width: 100%;
+    height: 100%;
+    background: none;
+    animation: cyberpunkGlow 1.5s infinite alternate;
+    color: white;
+}
+
+#result {
+    position: fixed;
+    top: 70%;
+    left: 40%;
+}
+
+</style>
+</head>
+
+<body>
+        <h1 style="text-align:center;">SCAMSLAM</h1>
+        <div class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="#home">Get Started</a>
+        </div>
+    <div class="container" style="position: relative; overflow: hidden; width: 115%; height: 100vh;">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/6cqRHpBQma1E79fB/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Choose your type</button>
+        <div class="dropdown-content">
+            <ul>
+                <li>Email</li>
+                <li>SMS</li>
+                <li>URL</li>
+            </ul>
+        </div>
+    </div>
+    <form id="container1" style="display: none" enctype="multipart/form-data">
+    <!-- For Email,URL and SMS -->
+    <input type="text" id="input-box" placeholder="">
+<button type="submit" id="submitBtn">Enter</button>  
+</form>
+    <br>
+    <br>
+    <br>
+    <div id="result" style="border:0.5 px solid white;background:none;">
+        <p></p>
+    </div>
+    <audio id="alertsound" src="{{ url_for('static', filename='music/Alert.mp3') }}" ></audio>
+<audio id="sucess" src="{{ url_for('static', filename='music/Success.mp3') }}" ></audio>
+<script src="{{ url_for('static', filename='js/mainpage.js') }}"></script>
+
+</body>
+
+</html>
