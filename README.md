@@ -24,6 +24,7 @@ No user data is stored permanently; scans are processed in real time with high r
 ## Motivation 
 With AI and technology growing there is a huge spike in the cyber attacks that are take place in the real world . Over the years cyber crimes has increased from 50-60% where phishing attack tends to stand 3rd in place . With the increase in these attacks **ScamSlam** hepls you to stay safe from the three most common phishing attacks by simplifying detection in multiple platforms into a single one .
 
+## System Diagram
 ![diagram](https://github.com/user-attachments/assets/0f11503f-0475-46dd-8843-04c6579b5236)
 
 ## Installation 
