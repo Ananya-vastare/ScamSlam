@@ -1,6 +1,6 @@
 # ScamSlam
 
-ScamSlam is an all in one phishing detection website that checks wheteher urls,qrcodes and email contents are phished or not.
+ScamSlam is an all in one phishing detection website that checks wheteher urls,sms and email contents are phished or not.
 
 ## Features
 1. **URL Phishing Detection**
